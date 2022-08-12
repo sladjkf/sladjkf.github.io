@@ -1,0 +1,17 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'Nicholas Wu'
+theme = "etch"
+
+[menu]
+  [[menu.main]]
+    identifier = "resume"
+    name = "resume"
+    title = "resume"
+    url = "/resume/"
+    weight = 10
+
+[markup.goldmark.renderer]
+  # Allow HTML in Markdown
+  unsafe = true
+
