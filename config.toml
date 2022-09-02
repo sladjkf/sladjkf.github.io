@@ -2,7 +2,7 @@ baseURL = 'https://sladjkf.github.io'
 languageCode = 'en-us'
 title = 'Nicholas Wu'
 theme = "etch"
-
+publishDir="docs"
 [menu]
   [[menu.main]]
     identifier = "resume"
@@ -10,6 +10,13 @@ theme = "etch"
     title = "resume"
     url = "/resume/"
     weight = 10
+  [[menu.main]]
+    identifier = "projects"
+    name = "projects"
+    title = "projects"
+    url = "/projects/"
+    weight = 10
+
 
 [markup.goldmark.renderer]
   # Allow HTML in Markdown
