@@ -1,8 +1,11 @@
 ---
 title: 'Nick Wu'
 ---
+<div style="text-align: center;">
 
 <img src="me.jpg" width=300/> 
+
+</div>
 
 Hi, my name is Nick Wu. 
 
