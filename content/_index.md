@@ -15,5 +15,5 @@ __Starting Fall 2023, I will be a PhD student in the [UMD Applied Mathematics an
 
 During my time at UVA, I have been very fortunate to be mentored by [Prasanna Balachandran](https://engineering.virginia.edu/balachandran-group/team) and [Anil Vullikanti](https://biocomplexity.virginia.edu/person/anil-vullikanti).
 
-In my free time, I enjoy playing and listening to music; I play the saxophone in [UVA's Jazz Ensemble.](https://www.youtube.com/watch?v=VESyseJabG4). I also used to upload [music videos on YouTube.](https://www.youtube.com/sladjkf)
+In my free time, I enjoy playing and listening to music; I play the saxophone in [UVA's Jazz Ensemble](https://www.youtube.com/watch?v=VESyseJabG4). I also used to upload [music videos on YouTube.](https://www.youtube.com/sladjkf)
 
