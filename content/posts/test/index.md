@@ -1,5 +1,5 @@
 ---
-title: 'test'
+title: 'Just a test page'
 ---
 
-Hiii
+Just a test page. 

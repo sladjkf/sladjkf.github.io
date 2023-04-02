@@ -11,6 +11,12 @@ publishDir="docs"
     url = "/resume/"
     weight = 10
   [[menu.main]]
+    identifier = "posts"
+    name = "posts"
+    title = "posts"
+    url = "/posts/"
+    weight = 10
+  [[menu.main]]
     identifier = "projects"
     name = "projects"
     title = "projects"

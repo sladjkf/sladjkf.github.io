@@ -2,4 +2,4 @@
 title: 'Posts'
 ---
 
-[test](test)
+[Test](test)
