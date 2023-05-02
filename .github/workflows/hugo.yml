@@ -1,57 +1,34 @@
-name: Deploy pages on push
+name: Build Hugo site
 
-# When the action should run. Here we specify it should run on push to main branch.
-# We also allow for manually running the action with the empty "workflow_dispatch".
 on:
   push:
     branches:
-      - main
-
-  workflow_dispatch:
-
-# Set the needed permissions
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-# Cancel running deployments if a new one is issued.
-concurrency:
-  group: pages
-  cancel-in-progress: true
+      - main  # Set a branch to deploy
+  pull_request:
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  deploy:
+    runs-on: ubuntu-22.04
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: "latest"
-          extended: true
-
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v2
+          hugo-version: '0.110.0'
+          # extended: true
 
       - name: Build
-        run: hugo --baseURL "${{ steps.pages.outputs.base_url }}/"
+        run: hugo --minify
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
         with:
-          path: ./public
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
