@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Nicholas Wu</title>
-    <link>https://sladjkf.github.io/categories/</link>
-    <description>Recent content in Categories on Nicholas Wu</description>
+    <title>Posts on Nicholas Wu</title>
+    <link>https://sladjkf.github.io/posts/</link>
+    <description>Recent content in Posts on Nicholas Wu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Tue, 02 May 2023 11:30:51 -0400</lastBuildDate>
     
-	<atom:link href="https://sladjkf.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sladjkf.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     
