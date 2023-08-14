@@ -1,1 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Nicholas Wu</title><link>https://sladjkf.github.io/posts/</link><description>Recent content in Posts on Nicholas Wu</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 02 May 2023 11:30:51 -0400</lastBuildDate><atom:link href="https://sladjkf.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>First post</title><link>https://sladjkf.github.io/posts/my_first_post/</link><pubDate>Tue, 02 May 2023 11:31:40 -0400</pubDate><guid>https://sladjkf.github.io/posts/my_first_post/</guid><description>&lt;p>This is mostly just a test of the posting functionality for this website&amp;hellip; hopefully more actual content to come soon! I&amp;rsquo;m thinking of using this page to write some stuff about what I&amp;rsquo;ve been studying and thinking about, and with more time coming up as my undergrad ends, I&amp;rsquo;ll be able to find time to do so.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Nicholas Wu</title>
+    <link>https://sladjkf.github.io/posts/</link>
+    <description>Recent content in Posts on Nicholas Wu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 02 May 2023 11:30:51 -0400</lastBuildDate>
+    
+	<atom:link href="https://sladjkf.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+    <item>
+      <title>First post</title>
+      <link>https://sladjkf.github.io/posts/my_first_post/</link>
+      <pubDate>Tue, 02 May 2023 11:31:40 -0400</pubDate>
+      
+      <guid>https://sladjkf.github.io/posts/my_first_post/</guid>
+      <description>&lt;p&gt;This is mostly just a test of the posting functionality for this website&amp;hellip; hopefully more actual content to come soon! I&amp;rsquo;m thinking of using this page to write some stuff about what I&amp;rsquo;ve been studying and thinking about, and with more time coming up as my undergrad ends, I&amp;rsquo;ll be able to find time to do so.&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    
+    
+    
+  </channel>
+</rss>
