@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" href="http://localhost:1313/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.min.css">
+
+    <title>My first year of grad school</title>
+</head>
+<body><header id="banner">
+    <h2><a href="http://localhost:1313/">Nicholas Ruiyuan Wu</a></h2>
+    <nav>
+        <ul>
+            <li>
+                <a href="/posts/" title="posts">posts</a>
+            </li><li>
+                <a href="/projects/" title="projects">projects</a>
+            </li><li>
+                <a href="/resume/" title="resume">resume</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main id="content">
+<article>
+    <header id="post-header">
+        <h1>My first year of grad school</h1>
+        <div>
+                <time>May 28, 2024</time>
+            </div>
+    </header><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<!-- The loading of KaTeX is deferred to speed up page rendering -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<!-- To automatically render math in text elements, include the auto-render extension: -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+
+    onload="renderMathInElement(document.body);"></script>
+<p>I just recently finished my first year of grad school at the University of Maryland. As I&rsquo;ve been taking some time to recover from the madness of the spring semester, I figured it might actually be good to write a few things about my experience with it, and finally make a post on my thus-far under-utilized website! After all, an aspiring academic can always use more practice writing (at least <a href="https://matt.might.net/articles/successful-phd-students/">Matt Might says so.</a>)</p>
+<p>I&rsquo;m writing this to sort of give myself a big-picture view of how things went and so I can piece together the narrative of how things are going. If you read this and you find it helpful, let me know! My email is on the homepage.</p>
+<hr>
+<h3 id="coursework">coursework</h3>
+<p>At UMD, first-year graduate students in the AMSC (Applied Math and Scientific Computation) program have the option of deciding between the Scientific Computing (SC) or the Applied Math (AM) track. In short, the SC track is less flexible in terms of coursework but doesn&rsquo;t require qualifying exams; the AM track is more flexible but requires qualifying exams.</p>
+<p>Being unsure, I opted for the first-year sequence of Scientific Computing I and II (which also counts as a coursework-based qualifying exam for the Applied Math track). However, ever since I&rsquo;d taken (non-measure theoretic) courses on stochastic processes and real analysis in undergrad, I wanted to learn measure-theoretic probability. Convex optimization had also been a topic I&rsquo;d wanted to learn since doing research that used optimization tools, so I excitedly added it to my schedule.</p>
+<p>Thus, my first year schedule ended up looking like this:</p>
+<center>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-u0o7{border-color:inherit;font-weight:bold;text-align:left;text-decoration:underline;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-u0o7">Fall 2023</th>
+    <th class="tg-u0o7">Spring 2024</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">Sci Comp I</td>
+    <td class="tg-0pky">Sci Comp II</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Prob I</td>
+    <td class="tg-0pky">Parallel Comp.</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Convex Opt.</td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">TA: Linear Algebra</td>
+    <td class="tg-0lax">TA: Intro to Prob</td>
+  </tr>
+</tbody>
+</table>
+</center>
+<p>The fall semester was a bit of a wake-up call to some extent. Moments that I remember include:</p>
+<ul>
+<li>
+<p>For Prob, I had enough background in analysis to do the problem sets after hours of struggle and StackExchange posts. But, even after that, when I got to the midterm exam and got seemingly simple questions like:<br>
+&ldquo;Let \(\eta \rightarrow a\) and \(\xi \rightarrow b\) (both in probability), where \(a,b\) are nonzero constants, and \(\eta,\xi\) are zero only on a set of measure zero. Show that \(\eta/\xi \rightarrow a/b\) in probability.&rdquo; <br>
+It&rsquo;s trivial if you know the <a href="https://en.wikipedia.org/wiki/Continuous_mapping_theorem">continuous mapping theorem</a>, but we hadn&rsquo;t been taught that. At the end of the day we got to take it home since all of us did so badly during the in-class portion of the exam.</p>
+</li>
+<li>
+<p>In Convex Optimization, numerous topics would appear on the homework that hadn&rsquo;t been taught in class (e.g subgradients), and vague questions like &ldquo;Would this choice of function be reasonable? Propose some conditions that would be appropriate&rdquo; also appeared.</p>
+</li>
+<li>
+<p>In Sci Comp I, I did well on all the HWs through the class, only to get a B grade overall due to my grade on the final. This meant I would have to get an A or better in the subsequent classes in the sequence to get qual credit.</p>
+</li>
+</ul>
+<p>I initially felt frustrated by these moments. &ldquo;Why hadn&rsquo;t we been taught these things? Why is the grading this way? Why can&rsquo;t this be more specific?&rdquo; To some extent, though, I began to appreciate that the standard for me as a graduate student was going to have to be higher than what I had in undergrad.</p>
+<p>Grad students (or, at least aspiring academics) need to be capable of reading and learning on their own when they encounter problems they don&rsquo;t know how to solve, and quickly learn techniques for solving those problems from the appropriate references. That&rsquo;s how research is, after all&hellip; you are trying to solve a problem that hasn&rsquo;t exactly been solved before, and perhaps turn a somewhat ill-defined question into a precise mathematical statement.</p>
+<p>Another conclusion - taking three classes is (generally) too much. I thought I could power through like I did in undergrad, but&hellip; no. Core grad courses are significantly harder, and TA duties (which did not exist in undergrad for me) also can be thought of as an additional class. During the final exam period, you not only have to take your own exams but also grade the finals of your students. I was so busy that I could not allocate the appropriate amount of effort to do well in all my classes. This has its consequences, especially when you&rsquo;re taking core courses that you need to do well in (see above).</p>
+<p>I wisened up and only took 2 courses the following semester (no more excitedly adding classes to my schedule). That turned out to be better - I was able to spend more time on my core course and get the grades I needed to fulfill the qual credit requirement. Still, though, the spring semester was also stressful - the TA work turned out to be more involved than expected as compared to the previous semester. This is just since there is some variance from course to course.</p>
+<hr>
+<h3 id="teachingtaing">teaching/TAing</h3>
+<p>On the other hand, teaching for me has been a mix of ups and downs.</p>
+<ul>
+<li>I discovered I really love lecturing. As a TA for Linear Algebra and Intro to Prob, I only had to do 50-minute discussions sections where I reviewed the course content and did example problems. I love being able to share my insight into the topics and help the students try to get a better handle on things, and I find the challenge of presenting the problems and content in a logical and organized way to be a delight. The real-time feeling of having students in front of me while I scratch away at the chalkboard definitely also keeps me engaged.</li>
+<li>I love having an excuse to make awful jokes. (&ldquo;Hey guys, today we&rsquo;re learning about the <a href="https://en.wikipedia.org/wiki/Central_limit_theorem">CLT</a>&hellip; you know, chicken, lettuce, and tomato&rdquo;). Sometimes they smile. Mostly they don&rsquo;t, because they&rsquo;re awful jokes. It amuses me, though.</li>
+<li>On the other hand, I really don&rsquo;t like grading. It&rsquo;s tedious work, and deciding on how many points to give what portion of the work can feel quite arbitrary. I also don&rsquo;t feel at ease when I give people bad grades; knowing that my actions can really make or break my students&rsquo; days. The grading turnaround for exams is also quite tight - I had to skip some of my own classes to make the turnaround for some weeks.</li>
+<li>Logistically, coordinating student work for a large-lecture class (even with several TAs) can become a headache as papers need to be shuffled back and forth between offices. I became a huge fan of Gradescope for this reason.</li>
+</ul>
+<p>I guess my position can be summarized as &ldquo;I like the actual teaching part but not the paperwork part.&rdquo; That&rsquo;s probably a very common opinion.</p>
+<hr>
+<h3 id="quals">quals</h3>
+<p>I took one qualifying exam after my fall semester, the qualifying exam in Probability. Initially, I was somewhat apprehensive about it since I only had taken half of the required course sequence (Prob I), but I told myself &ldquo;I have to try. Worst case, I fail and I have to do it again, but now I know what it&rsquo;s like. Best case, I pass.&rdquo;</p>
+<p>I studied primarily from <a href="https://services.math.duke.edu/~rtd/PTE/PTE5_011119.pdf">Durrett&rsquo;s book</a>. I found it to be an easier read than Koralov and Sinai, which is the book used in UMD&rsquo;s probability courses. Compared to Koralov and Sinai, Durrett is slightly more chatty and gives more examples, which I think makes for a better exposition. If I had more time, I probably would have also looked to <a href="https://link.springer.com/book/10.1007/978-1-4684-9305-4">Steele&rsquo;s book on stochastic calculus</a> to really nail down martingales, martingale convergence, Brownian motion, and stochastic integrals. There&rsquo;s some more reading to do&hellip;</p>
+<p>I prepared by just doing as many problems from the old qualifying exams as I could. Some of them I couldn&rsquo;t even solve (I still don&rsquo;t know how to do stochastic integration). There were also no official solutions at the time I was studying, so I was sort of in the dark as to whether I was doing things right. I really should have asked some more senior students if they had answer sheets for the old exams, though&hellip;</p>
+<p>I didn&rsquo;t try to waste too much time carefully learning the content. If I had more time and I knew what I was doing; it definitely would have been better to carefully read and learn - but for the exam, I tried to focus on patterns - &ldquo;ok, I definitely gotta use dominated convergence for this one. ok, this one is a limit theorem question&rdquo; - and just tried to get a handle on how to apply the basic tools.</p>
+<p>Apparently it worked well enough. I got a 36/60, which was the bare minimum passing score for this exam.  But, as others told me, &ldquo;nobody is going to ask what you got on the qual - it only matters that you passed.&rdquo; Amusingly, I also heard &ldquo;that&rsquo;s actually optimal because it means you didn&rsquo;t study more than you needed to.&rdquo;</p>
+<p>This result pretty much cemented my decision to follow the Applied Math track.</p>
+<hr>
+<h3 id="research">research</h3>
+<p>I tried to get started doing research and reading papers, but it was incredibly hard to find time and energy to do so on top of both the teaching and classwork committments. I sort of get the impression that the typical path is to focus on classwork for the first two years, then transition into research, but I wanted to get right into thinking about the bigger picture as soon as possible.</p>
+<p>Specifically, I started reading about multi-agent reinforcement learning, which I found to be a pretty fascinating and mathematically rich area of research. I learned some basic game theory, a small smattering of some proper complexity theory, and got to realize that there are some interesting applications of probability theory and PDEs to strategic interactions. I got a teeny bit of the big picture, but I don&rsquo;t even completely understand that. My goal is to do some more reading this summer.</p>
+<p>Still, I think I&rsquo;ve learned some things about the way I tend to read papers that I need to work on. For example, I have a tendency to handwave and just hope the details work out. In other words, I&rsquo;m not careful enough. This is probably a bad holdover from handwavy arguments on my homework.</p>
+<p>To fix this habit, I need to get into the habit of being critical and asking questions to myself.</p>
+<ul>
+<li>&ldquo;Why does this matter?&rdquo;</li>
+<li>&ldquo;Can you prove this?&rdquo;</li>
+<li>&ldquo;Do you really understand what this term/definition means?&rdquo;</li>
+</ul>
+<p>In my meetings where I would explain what I learned, I would get questions that I didn&rsquo;t know how to answer. I would dimly realize that I had thought about this, but not to the level that was actually sufficient to confidently and quickly answer the concerns that were raised.</p>
+<hr>
+<h3 id="life">life</h3>
+<p>I overall had a great time hanging out with my fellow grad students - everyone in the department at UMD is quite friendly. It was honestly really great to meet everyone the first few days and hear about the diverse set of research interests and backgrounds we all had. At first, it was honestly sometimes intimidating hanging out with other students who had more comprehensive backgrounds than I did, but I quickly realized that everyone was overall pretty relaxed and accomodating. I&rsquo;d always felt a bit inadequate in the sense that I didn&rsquo;t (and still don&rsquo;t) have the most comprehensive pure math background, but I realized that everyone has their own strengths and interests - and that&rsquo;s alright. I learned that it&rsquo;s better to ask questions, show interest, and find common ground (espectially outside of just math), rather than be scared that I don&rsquo;t know enough to hold a conversation.</p>
+<p>On the other hand, I became aware that some of my peers actually looked up to me in the same way that I looked up to others, which was a funny realization. It seems that no matter how highly we achieve, we&rsquo;re all going through similar experiences internally. That brought me back to earth. Math isn&rsquo;t everything; it may be a large part of my life, but not necessarily the whole world to me. At the end of the day, we&rsquo;re all just people connecting over shared interests and common experiences.</p>
+<p>We had a cohort struggling through the Sci Comp I/II sequence together, which made the experience significantly more bearable. We were able to share hints and strategies for attacking some of the HW problems in our shared office, which helped us get through the weekly homework.</p>
+<p>Just trying to also stay on top of the things that I needed to to continue living (like cooking for myself, cleaning, etc.) also took more time and energy than expected. It got somewhat demoralizing sometimes when after a long day of teaching and coursework, I remembered I had to get groceries. I also had to deal with seemingly random inconveniences like roaches and having my car damaged from a theft attempt. These were all ultimately resolvable, but felt demoralizing at the time.</p>
+<p>All these stressors resulted in several weeks where I had to keep telling myself &ldquo;You gotta keep it together&rdquo; just to make it through. It really made me realize that I actually do need to take time for myself, and spend time with the people I care about, and do the things I love besides just math. Seems obvious, right? But it was easy to forget when I was in the thick of things.</p>
+<p>On a slightly brighter note, I took up bike commuting to save on gas and parking dollars. This year, I hit a total of 1000 miles on my electric bike, and probably more that weren&rsquo;t logged on my non-electric bike. I think that was a fun achievement. It also helped me get some exercise that I would have absolutely neglected if I were only commuting by car.</p>
+<hr>
+<h3 id="conclusion">conclusion</h3>
+<p>I went in feeling pretty hyped to do math and I came out the first year feeling pretty tired and in need of a break. That&rsquo;s normal; I think. At least they tell me the first year is the hardest. I don&rsquo;t know if I entirely believe that, but I&rsquo;m willing to go along with it for now.</p>
+<p>My lessons learned (and favorite advice for myself) from this experience so far would probably be:</p>
+<ul>
+<li><strong>Don&rsquo;t be afraid.</strong> I wouldn&rsquo;t have been able to pass the quals, or learn as much as I did this year, if I remained afraid of people who knew more than me, or was scared of taking a class in something I didn&rsquo;t really know as well. I wouldn&rsquo;t have gotten started with reading if I was scared to reach out.</li>
+<li><strong>Always keep the big picture in mind.</strong> A piece of advice from my old mentor back at UVA. I feel like this is good advice for both research and life. To write a good article, you have to know what the overarching story is. To keep going through grad school, you have to keep telling yourself a story of why you are here and why this is worthwhile. (There were many moments where I questioned why I was doing this.)</li>
+<li><strong>Be critical and careful.</strong> To make a good story, you have to know all the details and make sure everything is right. You still have to know how all the details fit into the big picture and work at both scales.</li>
+<li><strong>A support network is critical.</strong> Having people you can talk to when things get too hard helps immensely.</li>
+</ul>
+</article>
+
+        </main><footer id="footer">
+    
+</footer>
+</body>
+</html>

@@ -1,6 +1,6 @@
 baseURL = 'https://sladjkf.github.io'
 languageCode = 'en-us'
-title = 'Nicholas Wu'
+title = 'Nicholas Ruiyuan Wu'
 theme = "etch"
 publishDir="docs"
 [menu]
