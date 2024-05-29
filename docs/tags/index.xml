@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Nicholas Ruiyuan Wu</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://sladjkf.github.io/tags/</link>
     <description>Recent content in Tags on Nicholas Ruiyuan Wu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sladjkf.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     
     <item>
       <title>My first year of grad school</title>
-      <link>http://localhost:1313/posts/2_first_year_grad_school/</link>
+      <link>https://sladjkf.github.io/posts/2_first_year_grad_school/</link>
       <pubDate>Tue, 28 May 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/2_first_year_grad_school/</guid>
+      <guid>https://sladjkf.github.io/posts/2_first_year_grad_school/</guid>
       <description>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css&#34; integrity=&#34;sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X&#34; crossorigin=&#34;anonymous&#34;&gt;
 &lt;!-- The loading of KaTeX is deferred to speed up page rendering --&gt;
 &lt;script defer src=&#34;https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js&#34; integrity=&#34;sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
@@ -140,10 +140,10 @@ It&amp;rsquo;s trivial if you know the &lt;a href=&#34;https://en.wikipedia.org/
     
     <item>
       <title>First post</title>
-      <link>http://localhost:1313/posts/1_my_first_post/</link>
+      <link>https://sladjkf.github.io/posts/1_my_first_post/</link>
       <pubDate>Tue, 02 May 2023 11:31:40 -0400</pubDate>
       
-      <guid>http://localhost:1313/posts/1_my_first_post/</guid>
+      <guid>https://sladjkf.github.io/posts/1_my_first_post/</guid>
       <description>&lt;p&gt;This is mostly just a test of the posting functionality for this website&amp;hellip; hopefully more actual content to come soon! I&amp;rsquo;m thinking of using this page to write some stuff about what I&amp;rsquo;ve been studying and thinking about, and with more time coming up as my undergrad ends, I&amp;rsquo;ll be able to find time to do so.&lt;/p&gt;
 </description>
     </item>
