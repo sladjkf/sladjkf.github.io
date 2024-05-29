@@ -17,4 +17,4 @@ As of now, I am broadly interested in mathematical modeling, statistics & probab
 
 In my free time, I enjoy playing and listening to music (especially jazz and jazz-adjacent things). I played the saxophone in [UVA's Jazz Ensemble](https://www.youtube.com/watch?v=VESyseJabG4). I also used to upload [music videos on YouTube.](https://www.youtube.com/sladjkf)
 
-Email: `[first letter of first name][last name]@umd.edu`
+Email: `[first letter of first name][last name]123@umd.edu`
