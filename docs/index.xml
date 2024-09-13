@@ -6,9 +6,30 @@
     <description>Recent content on Nicholas Ruiyuan Wu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 May 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Sep 2024 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://sladjkf.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+    <item>
+      <title>Talk slides: concentration inequalities</title>
+      <link>https://sladjkf.github.io/posts/3_stat_rit_talk/</link>
+      <pubDate>Fri, 13 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://sladjkf.github.io/posts/3_stat_rit_talk/</guid>
+      <description>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css&#34; integrity=&#34;sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X&#34; crossorigin=&#34;anonymous&#34;&gt;
+&lt;!-- The loading of KaTeX is deferred to speed up page rendering --&gt;
+&lt;script defer src=&#34;https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js&#34; integrity=&#34;sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
+&lt;!-- To automatically render math in text elements, include the auto-render extension: --&gt;
+&lt;script defer src=&#34;https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js&#34; integrity=&#34;sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa&#34; crossorigin=&#34;anonymous&#34;
+
+    onload=&#34;renderMathInElement(document.body);&#34;&gt;&lt;/script&gt;
+&lt;p&gt;I recently gave a short talk at UMD&amp;rsquo;s RIT (Research Interaction Team) on basic tail inequalities involving subgaussian and subexponential random variables. The slides are below (unannotated and annotated).&lt;/p&gt;
+&lt;iframe src=&#34;https://drive.google.com/file/d/1Eq986GOjphmTzVV_2Su7w3wFBZnNWTz4/preview&#34; width=&#34;640&#34; height=&#34;480&#34; allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;iframe src=&#34;https://drive.google.com/file/d/1eSlwk_Vj7K0E6VnbMBw-o8GdAjG1QdHO/preview&#34; width=&#34;640&#34; height=&#34;480&#34; allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+</description>
+    </item>
     
     
     
