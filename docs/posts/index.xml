@@ -26,7 +26,9 @@
 
     onload=&#34;renderMathInElement(document.body);&#34;&gt;&lt;/script&gt;
 &lt;p&gt;I recently gave a short talk at UMD&amp;rsquo;s RIT (Research Interaction Team) on basic tail inequalities involving subgaussian and subexponential random variables. The slides are below (unannotated and annotated).&lt;/p&gt;
+&lt;h2 id=&#34;unannotated&#34;&gt;Unannotated&lt;/h2&gt;
 &lt;iframe src=&#34;https://drive.google.com/file/d/1Eq986GOjphmTzVV_2Su7w3wFBZnNWTz4/preview&#34; width=&#34;640&#34; height=&#34;480&#34; allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
+&lt;h2 id=&#34;annotated&#34;&gt;Annotated&lt;/h2&gt;
 &lt;iframe src=&#34;https://drive.google.com/file/d/1eSlwk_Vj7K0E6VnbMBw-o8GdAjG1QdHO/preview&#34; width=&#34;640&#34; height=&#34;480&#34; allow=&#34;autoplay&#34;&gt;&lt;/iframe&gt;
 </description>
     </item>
@@ -169,6 +171,8 @@ It&amp;rsquo;s trivial if you know the &lt;a href=&#34;https://en.wikipedia.org/
       <description>&lt;p&gt;This is mostly just a test of the posting functionality for this website&amp;hellip; hopefully more actual content to come soon! I&amp;rsquo;m thinking of using this page to write some stuff about what I&amp;rsquo;ve been studying and thinking about, and with more time coming up as my undergrad ends, I&amp;rsquo;ll be able to find time to do so.&lt;/p&gt;
 </description>
     </item>
+    
+    
     
     
     
