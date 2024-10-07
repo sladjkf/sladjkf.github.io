@@ -14,6 +14,7 @@ The numerical ratings are sort of arbitrary; don't expect too much coherence bet
 
 ## Maryland
 
+
 ### [Vigilante Coffee (Hyattsville)](https://maps.app.goo.gl/zrfxB3CTHoUHsWt67)
 
 **Rating**: 8/10
@@ -38,6 +39,13 @@ Alright coffee and food, not the best. The atmosphere is pleasant, but the WiFi 
 
 Delicious coffee and friendly owner! It's a bit like stepping into the past. The decor feels like it hasn't been updated since the 90s, which I actually kind of dig, and there's cute odds and ends (local art) plastering the walls of the shop. A jazz playlist from IHeartRadio plays on a weak speaker, they have a $10 minimum for card purchases, and plenty of regulars come in to chat with the owner. You really feel that this shop is part of the community. No WiFi, come for the coffee and food (or bring physical books and paper instead).
 
+### [Wheaton Library](https://maps.app.goo.gl/B4H3nrbJSrJEMdwv5)
+
+**Rating: 8/10**
+
+Talk about the kitchen sink, man. It's a library... and a rec center, and a cafe (actually a branch of the aforementioned Kefa Cafe), and a used bookstore. And there's an H-Mart up the street. Nice and quiet, large windows with lots of natural light. I think it sometimes gets busier after the local high schools let out, though.
+
+
 ## DC
 
 ### [Portrait Gallery Courtyard](https://maps.app.goo.gl/C1bwQNQ7kS9A9bTu6)
@@ -45,6 +53,12 @@ Delicious coffee and friendly owner! It's a bit like stepping into the past. The
 **Rating**: 9/10
 
 Okay, this place is amazing. But don't come here to work - come here to browse the art museum and stare up at the clouds while lying on a stone bench, and listen to the conversations happening near you, and contemplate what you're doing with your life. Seating for the cafe is pretty hard to get since it's a popular spot. I haven't tried the cafe itself but I don't expect it to be much good.
+
+### [Martin Luther King Jr. Memorial Library](https://maps.app.goo.gl/igJsWAwDLCDq8Tmt8)
+
+**Rating**: 7/10
+
+It's a pretty decent place to sit for a while and work - and there is a cafe inside! Unfortunately, it doesn't quite tick the architectural boxes I'm looking for (i.e the "Grand Room" is a tad underwhemling), although it is perfectly peaceful and there is plenty of seating with ample natural light. Conveniently accessed via the Green Line from College Park, so not a bad place to spend a Saturday. Has pretty stiff competition since the Portrait Gallery is right across the street from it, though.
 
 
 ## Northern Virginia
