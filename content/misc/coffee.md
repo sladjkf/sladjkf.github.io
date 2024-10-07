@@ -53,10 +53,30 @@ Okay, this place is amazing. But don't come here to work - come here to browse t
 
 **Rating:** 8/10
 
+*Visited*: 09/22/2024
+
 A nice balance of woody warmth and clean modern looks. Breakfast sandwiches and coffee are all pretty good. A lively spot on weekends; full tables get taken up by families looking to spend their morning here, but I saw plenty of people camping out with their laptops too (like me). Korean coffee decor on a display shelf near the counter (makes sense for Chantilly).
 
 ### [Second Nature Coffee](https://maps.app.goo.gl/u7qw6KuB7To8hneZA)
 
 **Rating**: 6.5/10
 
+*Visited*: 09/23/2024
+
 Leesburg locals will know that this place used to be called King St. Coffee and was an absolute Leesburg institution. Now it's back under a different name, but I still don't like the coffee that much. The place has been renovated and cleaned up, and overall I enjoy the wood and the warmth but it still has a certain "Live Laugh Love" kitsch that I'm not 100% on board with. (Actually, I think most of Downtown Leesburg has a bit of that kitsch, but it's alright...)
+
+### [Paris Baguette (Herndon)](https://maps.app.goo.gl/uNvcp5QqFBarhfn57)
+
+**Rating**: 6.5/10
+
+*Visited*: 10/05/2024
+
+First time at a Paris Baguette. Pretty solid, honestly; can't complain too much. Lots of seating and natural light, clean and well furnished. Definitely nice for sitting for a while and working. However, the food and coffee aren't exceptional. Coffee was definitely subpar. Also had a pain au chocolat, which wasn't bad. Seems like places that do food and drink are usually better at one of the two, and given the name of this chain it seems to be the pastries. Would return though (since the ambiance is fairly nice).
+
+### [De Clieu Coffee and Sandwiches - Legato](https://maps.app.goo.gl/BK7AQNNaZtd76jMB8)
+
+**Rating**: 8.5/10
+
+*Visited*: 10/06/2024
+
+Quite good. Wasn't sure what to expect, but as soon as I took a look at the menu I realized they take coffee pretty seriously. Ordered a pourover (not often that you see that, I feel) and a BLT (small but taste was pretty good). Open space, lots of seating, and friendly staff. Definitely will come back if I'm in the area.
