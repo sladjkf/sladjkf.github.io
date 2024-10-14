@@ -45,6 +45,14 @@ Delicious coffee and friendly owner! It's a bit like stepping into the past. The
 
 Talk about the kitchen sink, man. It's a library... and a rec center, and a cafe (actually a branch of the aforementioned Kefa Cafe), and a used bookstore. And there's an H-Mart up the street. Nice and quiet, large windows with lots of natural light. I think it sometimes gets busier after the local high schools let out, though.
 
+### [Shop Made in MD](https://maps.app.goo.gl/9cn2Ty4qNNNX63L69)
+
+**Rating: 6.5/10**
+
+*Visited: 10/13/2024*
+
+A shop showcasing products and goodies from local vendors and craftspeople. Actually have been here a few times before during the summer, was pretty quiet then.  The vibe was... not personally my cup of tea... or coffee? (See the review of Second Nature Coffee below, under [Northern Virginia](#northern-virginia) - a slightly different kind of kitsch, though). I ordered a cortado and a bagel. Both were perfectly fine, not outstanding but good (although not entirely sure if my cortado tasting game is on point). You'll find mostly UMD students (and their parents coming to visit them) working here on a weekend, it seems.  Overall, I'd go to Vigilante Hyattsville any day over this; but its main draw seems to be the proximity to UMD's campus.
+
 
 ## DC
 
@@ -61,6 +69,14 @@ Okay, this place is amazing. But don't come here to work - come here to browse t
 It's a pretty decent place to sit for a while and work - and there is a cafe inside! Unfortunately, it doesn't quite tick the architectural boxes I'm looking for (i.e the "Grand Room" is a tad underwhemling), although it is perfectly peaceful and there is plenty of seating with ample natural light. Conveniently accessed via the Green Line from College Park, so not a bad place to spend a Saturday. Has pretty stiff competition since the Portrait Gallery is right across the street from it, though.
 
 
+### [Capitol One Cafe (Chinatown D.C.)](https://maps.app.goo.gl/uChg73Ymidc7ku8s5)
+
+*Visited: 10/13/2024*
+
+**Rating**: 5.5/10
+
+Okay, slightly breaking the "No Chains" rule for this one, but I'd been curious about this place for a while and decided to try the Chinatown location. Perfectly fine place to work. They have greeters/promoters who chat with you as you walk in the door; struck up a conversation with one and he pulled some strings to get me a free coffee! That's pretty cool. The coffee is served by Verve, which I understand is a West Coast brand. However, Google reviewers seem to look unfavorably upon this particular instantiation, deeming it unworthy of that name. I don't know about all that - I got a free drip coffee (perfectly drinkable), so life is pretty good. You have to ask the security guard to be let into the bathroom, which I guess makes sense in D.C. sometimes. Lower rating on principle (since it's honestly not that far above a Starbucks, all things considered).
+
 ## Northern Virginia
 
 ### [Cafein](https://maps.app.goo.gl/DkasuMzya5ev8EzZ9)
@@ -72,6 +88,7 @@ It's a pretty decent place to sit for a while and work - and there is a cafe ins
 A nice balance of woody warmth and clean modern looks. Breakfast sandwiches and coffee are all pretty good. A lively spot on weekends; full tables get taken up by families looking to spend their morning here, but I saw plenty of people camping out with their laptops too (like me). Korean coffee decor on a display shelf near the counter (makes sense for Chantilly).
 
 ### [Second Nature Coffee](https://maps.app.goo.gl/u7qw6KuB7To8hneZA)
+
 
 **Rating**: 6.5/10
 
