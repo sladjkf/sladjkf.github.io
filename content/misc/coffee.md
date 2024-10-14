@@ -45,6 +45,14 @@ Delicious coffee and friendly owner! It's a bit like stepping into the past. The
 
 Talk about the kitchen sink, man. It's a library... and a rec center, and a cafe (actually a branch of the aforementioned Kefa Cafe), and a used bookstore. And there's an H-Mart up the street. Nice and quiet, large windows with lots of natural light. I think it sometimes gets busier after the local high schools let out, though.
 
+### [Cuppa Tea](https://maps.app.goo.gl/oPqVvaZUqp7Ymoeu5)
+
+**Rating:** 7/10
+
+*Visited: 10/11/2024*
+
+A place that serves Hong Kong style milk tea (gasp.. not coffee??) I feel it's a pretty nice concept, sets it apart from the millions of other boba shops in the area. My understanding is that this style of milk tea is more commonly encountered in Asia, though. Ordered a standard Hong Kong milk tea, a bit on the pricey side but does definitely have a unique flavor. Interior has a nice design and plenty of character, but connecting to WiFi is a bit of a hassle. Seems like it's better just as a hangout spot with friends rather than for working. Try the egg waffles, very shareable and not too sweet. Also open late.
+
 ### [Shop Made in MD](https://maps.app.goo.gl/9cn2Ty4qNNNX63L69)
 
 **Rating: 6.5/10**
