@@ -3,7 +3,7 @@ title: 'Nicholas Ruiyuan Wu'
 ---
 <div style="text-align: center;">
 
-<img src="me_2023-08-14.jpeg" width=300/>
+<img src="me_2024-10-25.jpg" width=300/>
 
 </div>
 
@@ -20,4 +20,4 @@ Some other things that I enjoy include
 - Going to coffee shops [(here is my own list of cafes that I've visited)]({{<ref "misc/coffee.md">}})
 - Bike commuting and public transit.
 
-Email: `[first letter of first name][last name]123@umd.edu`
+gmail: `[first letter of first name][last name]123@umd.edu`
