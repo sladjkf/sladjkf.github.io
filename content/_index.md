@@ -3,7 +3,7 @@ title: 'Nicholas Ruiyuan Wu'
 ---
 <div style="text-align: center;">
 
-<img src="me_2023-08-14.jpeg" width=300/>
+<img src="me_2024-10-25.jpg" width=300/>
 
 </div>
 
