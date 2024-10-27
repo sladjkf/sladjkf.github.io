@@ -85,6 +85,14 @@ It's a pretty decent place to sit for a while and work - and there is a cafe ins
 
 Okay, slightly breaking the "No Chains" rule for this one, but I'd been curious about this place for a while and decided to try the Chinatown location. Perfectly fine place to work. They have greeters/promoters who chat with you as you walk in the door; struck up a conversation with one and he pulled some strings to get me a free coffee! That's pretty cool. The coffee is served by Verve, which I understand is a West Coast brand. However, Google reviewers seem to look unfavorably upon this particular instantiation, deeming it unworthy of that name. I don't know about all that - I got a free drip coffee (perfectly drinkable), so life is pretty good. You have to ask the security guard to be let into the bathroom, which I guess makes sense in D.C. sometimes. Lower rating on principle (since it's honestly not that far above a Starbucks, all things considered).
 
+### [Tynan Coffee and Tea](https://maps.app.goo.gl/fQpRExM7CrDcMQYK9)
+
+*Visited: 10/27/2024*
+
+**Rating**: 6.5/10
+
+Ordered a cortado and a turkey sandwich. Cortado was served nice and hot, but not much texture to the milk: "good but not great." Environment is perfectly fine, decor is a little rough around the edges but overall fine - I appreciate the slightly worn-looking wood tables and the high ceiling in the entranceway. No WiFi on the weekends, so if you want to work there download everything beforehand or bring paper copies. Overall, perfectly serviceable, but I'd say that I've had better in terms of both coffee and environment. Convenient to the Green Line via the Columbia Heights station.
+
 ## Northern Virginia
 
 ### [Cafein](https://maps.app.goo.gl/DkasuMzya5ev8EzZ9)
