@@ -11,7 +11,9 @@ Hi!
 
 My full name is **Nicholas Ruiyuan Wu.** Most people just call me **Nick.** Sometimes they call me *Nick Wu.*
 
-I am a second-year PhD student at the [University of Maryland](https://maryland.edu/)'s [Applied Mathematics and Scientific Computation (AMSC) program.](https://amsc.umd.edu) Before that, I did my bachelor's at the [University of Virginia](https://www.virginia.edu/). There, I was very fortunate to be mentored by [Prasanna Balachandran](https://engineering.virginia.edu/balachandran-group/team) and [Anil Vullikanti](https://biocomplexity.virginia.edu/person/anil-vullikanti).
+I am a second-year PhD student at the [University of Maryland](https://maryland.edu/)'s [Applied Mathematics and Scientific Computation (AMSC) program.](https://amsc.umd.edu) Before that, I did my bachelor's at the [University of Virginia](https://www.virginia.edu/). There, I was very fortunate to be mentored by 
+[Prasanna Balachandran](https://engineering.virginia.edu/faculty/prasanna-balachandran)
+and [Anil Vullikanti](https://biocomplexity.virginia.edu/person/anil-vullikanti).
 
 As of now, I am broadly interested in (and trying to learn more about) models of (optimal) decision-making under uncertainty, especially using tools from applied probability and in the case of several or many agents.
 
