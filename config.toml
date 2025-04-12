@@ -17,10 +17,10 @@ publishDir="docs"
     url = "/posts/"
     weight = 10
   [[menu.main]]
-    identifier = "projects"
-    name = "projects"
-    title = "projects"
-    url = "/projects/"
+    identifier = "research"
+    name = "research"
+    title = "research"
+    url = "/research/"
     weight = 10
 
 

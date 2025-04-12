@@ -13,6 +13,221 @@
     
     
     <item>
+      <title>Stochastic gradient estimation - two Markov chain examples</title>
+      <link>https://sladjkf.github.io/posts/4_stoch_grads/</link>
+      <pubDate>Mon, 07 Oct 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://sladjkf.github.io/posts/4_stoch_grads/</guid>
+      <description>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css&#34; integrity=&#34;sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X&#34; crossorigin=&#34;anonymous&#34;&gt;
+&lt;!-- The loading of KaTeX is deferred to speed up page rendering --&gt;
+&lt;script defer src=&#34;https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js&#34; integrity=&#34;sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
+&lt;!-- To automatically render math in text elements, include the auto-render extension: --&gt;
+&lt;script defer src=&#34;https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js&#34; integrity=&#34;sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa&#34; crossorigin=&#34;anonymous&#34;
+
+    onload=&#34;renderMathInElement(document.body);&#34;&gt;&lt;/script&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Consider the following type of problem, first informally stated:&lt;/p&gt;
+&lt;p&gt;We have a (stochastic) simulation model of a real-world process, for which we can control some input parameters. The performance of this process is measured by some sort of objective function, which we wish to optimize by changing the input parameters. This sort of problem abounds in applications; queueing theory is rife with such examples.&lt;/p&gt;
+&lt;p&gt;More formally stated: suppose we have a discrete-time Markov chain \( (X_n)_{n=1}^\infty \) on a (continuous or discrete) state space \(\mathcal{X}\), for which the transitions are known. Suppose the transition kernel \(\mathbb{P}(X_{i+1} \mid X_i)\) is parameterized by a (in general vector-valued) parameter \(\theta\). Given a objective function \(J(x_1, x_2, \ldots, x_T)\), we want to maximize the quantity
+$$
+\mathbb{E}(g(X_1,X_2,\ldots, X_T))
+$$
+with respect to \(\theta\). Note that above, we are restricting ourselves to finite time-horizon performance measures, with time horizon \(T\).&lt;/p&gt;
+&lt;p&gt;Thus, let \(\mathcal{X}^T = \mathcal{X} \times \ldots \mathcal{X}\), i.e tuples of length \(T\) in the product state space.&lt;/p&gt;
+&lt;p&gt;A natural way to approach this would be to try to compute
+$$
+\frac{d\mathbb{E}(g(X_1,X_2,\ldots, X_T))}{d\theta}
+$$
+and use standard first-order methods for optimization to solve the problem. Clearly, this may not be tractable - there are many chains for which computing the expectation analytically would not be doable. An alternative approach is to try to construct &lt;em&gt;statistical estimators&lt;/em&gt; of this quantity, which is the basic idea of stochastic gradient estimation.&lt;/p&gt;
+&lt;p&gt;Unbiased estimators can be obtained assuming that an interchange of differentiation and expectation (the integral) is justified. This is true for &amp;ldquo;sufficiently nice&amp;rdquo; objective functions \(g(\cdot)\) - a precise statement of sufficient conditions for this are given by the dominated convergence theorem. For example, if \(g\) is bounded, such an interchange would hold.&lt;/p&gt;
+&lt;p&gt;Assuming that such an interchange holds, one has to consider where the parameter \(\theta\) appears in the expectation. Our focus right now is on examples where \(\theta\) appears most naturally in the transition kernel, i.e suppose that there is a family of distributions on the first \(T\) coordinates parameterized by \(\theta\):
+$$
+\theta \mapsto \mathbb{P}_{\theta}(X_1,\ldots,X_T)
+$$
+There are two approaches of interest in this case. For convenience, let us write a joint density \(f(x_1,\ldots, x_T;\theta)\) to represent the probability measure.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(1): The likelihood ratio/score function (LR/SF) approach.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Notice that the following identity holds by the chain rule of calculus:
+$$
+\frac{df(x_1,\ldots, x_T;\theta)}{d\theta} = \frac{d \log f(x_1,\ldots,x_n; \theta)}{d\theta} f(x_1,\ldots,x_n;\theta)
+$$
+Thus, assuming the aforementioned interchange of differentiation and integration is permissible,&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+&amp;amp;\frac{d\mathbb{E}(g(X_1,X_2,\ldots, X_T))}{d\theta} \\
+&amp;amp;=
+\int_{\mathcal{X}^T} g(x_1,\ldots, x_n) \frac{df(x_1,\ldots, x_T;\theta)} {d\theta}
+\text{ d}x_1 \ldots \text{ d}x_T\\
+&amp;amp;=
+\int_{\mathcal{X}^T} g(x_1,\ldots, x_T)
+\frac{d \log f(x_1,\ldots,x_T; \theta)}{d\theta}
+f(x_1,\ldots,x_T; \theta)
+\text{ d}x_1 \ldots \text{ d}x_T \\
+&amp;amp;\approx \frac{1}{N}\sum_{(x_1,\ldots,x_T)}g(x_1,\ldots, x_T)
+\frac{d \log f(x_1,\ldots,x_T; \theta)}{d\theta}
+\end{aligned}
+$$
+i.e one can approximiate the gradient in a Monte-Carlo fashion by sampling \(x_1,\ldots,x_n\) according to the original measure \(f(x_1,\ldots, x_T)\) on the chain parameterized by \(\theta\), and plugging into the expression within the sum.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(2): The weak derivative approach.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Assume that the density \(f(x_1,\ldots,x_n;\theta)\) can be rewritten so that the following identity holds:
+$$
+\frac{df(x_1,\ldots, x_T;\theta)}{d\theta} = c(\theta)
+\left[
+f^{(1)}(x_1,\ldots, x_n;\theta) -
+f^{(2)}(x_1, \ldots, x_n; \theta)
+\right]
+$$
+A decomposition of this form is guaranteed to exist by the Hahn decomposition theorem. It is the so called &amp;ldquo;weak derivative&amp;rdquo; since this choice of \(f^{(1)}\) and \(f^{(2)}\) is in general nonunique. Then, the gradient can be approximated by simulating with respect to the measures \(f^{(1)}\) and \(f^{(2)}\).&lt;/p&gt;
+&lt;p&gt;We wish to better understand these approaches by considering problems in which the solution is intuitively obvious, but can be rigorously solved by these approaches. To that end, we construct the following two examples.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;example-1-a-simple-discrete-state-markov-chain&#34;&gt;Example 1. A simple discrete-state Markov chain.&lt;/h2&gt;
+&lt;p&gt;Consider the following three-state Markov chain on the space \(\mathcal{X}=\{0,1,2\}\) with the transition matrix parameterized by \(\theta \in (0,1)\):&lt;/p&gt;
+&lt;p&gt;$$
+P =
+\begin{pmatrix}
+1-\theta &amp;amp; \theta &amp;amp; 0\\
+1- \theta &amp;amp; 0 &amp;amp; \theta \\
+0 &amp;amp; 1-\theta &amp;amp; \theta
+\end{pmatrix}
+$$&lt;/p&gt;
+&lt;p&gt;where the first row corresponds to \(0\), the second row corresponds to \(1\), and the third row corresponds to \(2\). In simple terms, the chain can be described as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;move right (or stay at \(2\)) with probability \(\theta\),&lt;/li&gt;
+&lt;li&gt;move left (or stay at \(0\)) with probability \(1-\theta\).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Let us suppose that \(X_0 = 0\). We want to consider maximizing the quantity \(\sum_{n=1}^T \rho^n X_i\) where \(\rho \in (0,1)\) is a discounting factor. It is intuitively clear that we should let \(\theta \rightarrow 1\) to maximize this quantity.&lt;/p&gt;
+&lt;p&gt;In what follows, it will be convenient to write the transition kernel as a sum of indicators. We can do this for a finite-state Markov chain as follows:
+$$
+\mathbb{P}(X_{n+1} = x_{n+1} \mid X_n = x_n) = \sum_{i,j}1\{x_{n}=i, x_{n+1}=j\} P_{i,j}
+$$
+In our example, we can decompose the transition kernel into two terms:
+$$
+p(x_i,x_{i+1})
+= (1-\theta)\sum_{
+(i,j) \in A
+} \mathbb{1}\{x_{i}  = i, x_{i+1}=j\}
++
+\theta\sum_{(i,j) \in B}
+\mathbb{1}\{x_{i}  = i, x_{i+1}=j\}
+$$
+where \( A = \{(0,0), (1,0), (2,1)\} \), \( B=\{(0,1),(1,2),(2,2)\} \).&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;The likelihood-ratio estimator.&lt;/em&gt; Now observe that we can write the expectation out as&lt;/p&gt;
+&lt;p&gt;$$
+\mathbb{E}\left[\sum_{i=1}^T \rho^n X_i\right] = \sum_{(x_1,\ldots,x_T) \in \mathcal{X}^T} \left(\sum_{i=1}^T \rho^n X_i\right)
+p(x_0,x_1)\ldots p(x_{T-1},x_T)
+$$&lt;/p&gt;
+&lt;p&gt;So the measure is over paths of length \(T\). Taking the derivative of the log gives the estimator of the form&lt;/p&gt;
+&lt;p&gt;$$
+\left(\sum_{i=1}^T \rho^n X_i\right) \frac{d}{d\theta} \log(p(X_0,X_1)\ldots p(X_{T-1},X_T))=
+\left(\sum_{i=1}^T \rho^n X_i\right) \left(\sum_{i=1}^T \frac{d}{d\theta}\log p(X_{i-1},X_i)\right)
+$$&lt;/p&gt;
+&lt;p&gt;$$
+\frac{d}{d\theta}\left[\log p(X_{i-1}, X_i)\right] = \frac{\frac{d}{d\theta}[p(X_{i-1},X_i)]}{p(X_{i-1},X_i)} =
+\frac{
+-\sum_{
+(i,j) \in A
+} \mathbb{1}\{X_{i}  = i, X_{i+1}=j\}
++ \sum_{(i,j) \in B}
+\mathbb{1}\{X_{i}  = i,
+X_{i+1}=j\}
+}{
+(1-\theta)\sum_{
+(i,j) \in A
+} \mathbb{1}\{X_{i}  = i, X_{i+1}=j\}
++
+\theta\sum_{(i,j) \in B}
+\mathbb{1}\{X_{i}  = i, X_{i+1}=j\}}
+$$&lt;/p&gt;
+&lt;p&gt;$$
+\frac{d\widehat{J}(X_1,\ldots, X_T)}{d\theta}=\left(\sum_{i=1}^T \rho^n X_i\right)
+\left(
+\sum_{n=0}^{T-1}
+\frac{ -\sum_{
+(i,j) \in A
+} \mathbb{1}\{X_{n}  = i, X_{n+1}=j\}
++ \sum_{(i,j) \in B}
+\mathbb{1}\{X_{n}  = i, X_{n+1}=j\}
+}{
+(1-\theta)\sum_{
+(i,j) \in A
+} \mathbb{1}\{X_{n}  = i, X_{n+1}=j\}
++
+\theta\sum_{(i,j) \in B}
+\mathbb{1}\{X_{n} = i, X_{n+1}=j\}}
+\right)
+$$&lt;/p&gt;
+&lt;p&gt;This can be estimated in an actual simulation setting by simulating paths \((x_0, x_1,\ldots, x_T)\), and doing Monte-Carlo to find the expected value, which is equivalent to \(\frac{d\mathbb{E}(J(X_1,\ldots,X_T))}{d\theta}\). This estimator has an intuitive interpretation in the following sense:
+$$
+\left(\text{realized cost over the path given } \theta\right)
+\left(
+\frac{-(\text{number of left moves})}{1-\theta}
++
+\frac{\text{number of right moves}}{\theta}
+\right)
+$$
+When I realized that the estimator had the above form, I was reminded of gradient estimators used in reinforcement learning. Indeed, when applied to Markov Decision Processes (MDPs) with policies of parametric form \(\pi_\theta\), the likelihood-ratio technique for finding the parameters of the optimal policy in the class of parameterized parameters is called REINFORCE - the canonical reference is &lt;a href=&#34;https://link.springer.com/article/10.1007/bf00992696&#34;&gt;Williams (1992)&lt;/a&gt;. Interestingly, it seems that the literature from the simulation optimization community and the reinforcement learning community on this topic have developed in parallel; Williams&amp;rsquo; paper primarily seems to reference previous papers on RL and does not directly reference simulation optimization papers on stochastic gradient estimation (although such works appeared prior to Williams&amp;rsquo;, e.g this expository article by &lt;a href=&#34;https://dl.acm.org/doi/abs/10.1145/84537.84552&#34;&gt;Glynn (1990)&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;In practice, one faces several challenges in using an estimator of this type. The primary challenge is &lt;em&gt;controlling variance&lt;/em&gt; to limit the amount of computation necessary to get good gradients. It&amp;rsquo;s readily observed that there is a blowup when \(\theta\) is close to 1 or 0, and the variance will also grow with respect to the time horizon. A naive way of mitigating the variance dependent on the time horizon is to decrease the discounting factor \(\rho\), but in general techniques from Monte-Carlo variance reduction can be applied (e.g common random numbers, quasi-Monte-Carlo, etc.)&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;The weak derivative estimator.&lt;/em&gt;
+The weak-derivative estimator for a path of length \(T&amp;gt;1\) doesn&amp;rsquo;t seem straightforward to derive, as it requires direct differentiation of the product of transitions \(p(x_0,x_1)\ldots p(x_{T-1},x_T)\) (in which there will be a lot of terms). It is still somewhat instructive to see what happens for \(p(x_0, x_1)\) - the decomposition into two measures is apparent from the above calculations:&lt;/p&gt;
+&lt;p&gt;$$
+\sum_{(i,j) \in B}
+\mathbb{1}\{x_{i}  = i,
+x_{i+1}=j\}
+-\sum_{
+(i,j) \in A
+} \mathbb{1}\{x_{i}  = i, x_{i+1}=j\} =
+p_1(x_i,x_{i+1}) - p_2(x_i,x_{i+1})
+$$&lt;/p&gt;
+&lt;p&gt;These correspond to the difference of two deterministic measures, one in which you only move left and one in which you only move right. The gradient would be the performance difference from following one vs. the other. Notice already that this would require simulating two different version of the chain if there was a remaining stochasticity dependent on \(\theta\), but in this case since the resulting measures are degenerate there is no simulation required when \(T=1\). In general, though, one could imagine running \(2^T\) versions of the chain where we replace each \(n\)th step by a deterministic move left or right, which would be prohibitively expensive.&lt;/p&gt;
+&lt;h2 id=&#34;example-2-dependence-on-a-continuous-initial-state&#34;&gt;Example 2. Dependence on a continuous initial state.&lt;/h2&gt;
+&lt;p&gt;Consider a chain which describes the following sort of process.&lt;/p&gt;
+&lt;p&gt;A game is played as follows. You, the participant, choose a time budget in the compact interval \([0,M]\). I, the game&amp;rsquo;s host, give you tasks to complete which take a random amount of time at each discrete timestep \(t=0,1,2,\ldots\), which represents the current round. The time it takes to complete a task is an \(\text{Exp}(\lambda)\) random variable. The game ends when you run out of time. We consider the following two questions:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(1). On average, what is the expected number of rounds that one survives?&lt;/em&gt;
+&lt;em&gt;(2). How should one choose the time budget to maximize the number of rounds they survive?&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The answer to &lt;em&gt;(1)&lt;/em&gt; is not immediately obvious, but the answer to &lt;em&gt;(2)&lt;/em&gt; is: you should choose \(M\). Even though one might be able to analytically compute the solution to &lt;em&gt;(1)&lt;/em&gt; and thus the answer to &lt;em&gt;(2)&lt;/em&gt;, to illustrate the ideas of gradient estimation we shall try to derive an estimator.&lt;/p&gt;
+&lt;p&gt;A formal specification of the chain is:&lt;/p&gt;
+&lt;p&gt;$$
+\mathcal{X} = \mathbb{R}
+$$
+$$
+X_0 = \theta
+$$
+$$
+X_{i+1} = \max(X_i - \Delta_i,0)
+$$
+$$
+\Delta_i \sim Exp(\lambda) \hspace{0.2cm} \text{(i.i.d})
+$$
+$$
+J(X_1,\ldots) = \inf\{n\in \{0,1,\ldots\}\mid X_n = 0\}
+$$&lt;/p&gt;
+&lt;p&gt;The objective, \(J\), is a discrete random variable. Assuming the interchange of summation and differentiation is justified (which it is, to be shown shortly), we may write&lt;/p&gt;
+&lt;p&gt;$$
+\mathbb{E}(J) = \sum_{j=0}^\infty j \mathbb{P}(J(X_1,\ldots,) = j)
+$$
+$$
+\frac{d\mathbb{E}(J)}{d\theta} = \sum_{j=0}^\infty j \frac{d\mathbb{P}(J(X_1,\ldots,) = j)}{d\theta}
+$$&lt;/p&gt;
+&lt;p&gt;In fact, \(J-1\) is \(\text{Poisson}(\theta\lambda)\). This can be intuitively seen as follows: at least one step must be taken till the game ends, so \(J\) is at least one. Recall that a \(\text{Poisson}(\theta\lambda)\) variable may be interpreted as the number of arrivals in a time interval of length \(\theta\) with interarrival time distributed as \(\text{Exp}(\lambda)\).  If there are no arrivals in the time interval \(\theta\), the first arrival (or task) took more than \(\theta\) time to complete. If there is one arrival in the time interval \(\theta\), the first task was completed within \(\theta\) time but the second task took the remaining time to complete, etc.&lt;/p&gt;
+&lt;p&gt;To prove this (by manipulating the PDFs), we observe that \(J\) is the first time that the sum of the increments \(\sum_i \Delta_i\) exceeds \(\theta\). The probability that this time is equal to \(j\) is
+$$
+\mathbb{P}(\sum_{i=1}^{j-1} \Delta_i&amp;lt;\theta, \Delta_j &amp;gt; \theta - \sum_{i=1}^{j-1} \Delta_i)
+= \int_0^\theta\int_{\theta-s}^\infty f_S(s)f_Y(y)\text{ dy} \text{ ds}
+$$
+where we let \(S \sim \text{Erlang}(j-1,\lambda)\) and \(Y \sim \text{Exp}(\lambda)\). After one does this integral, we obtain a Poisson PMF. By this point, we know the expectation and its derivative: \(\mathbb{E}(J) = \lambda \theta\), \(\frac{d \mathbb{E}(J)}{d\theta} = \lambda\) so the solution is quite clear.&lt;/p&gt;
+&lt;p&gt;From this, the LR estimator becomes
+$$
+X\left(\frac{X}{\theta} - \lambda\right)
+$$
+where \(X \sim \text{Poisson}(\lambda \theta)\).&lt;/p&gt;
+&lt;p&gt;While this example turned out to be quite straightforward, it illustrates that the dependence of the chain on initial conditions can sometimes naturally appear within the probability measure rather than within the objective function \(J\), and that obtaining the exact form of this dependence may take a little thought. It may not be obvious where the parameter appears, and where the parameter appears and how the output variable depends on the parameter will affect the natural choice of which type of estimator to use.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;References.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Fu, Michael C. Stochastic gradient estimation. Springer New York, 2015. &lt;a href=&#34;https://link.springer.com/chapter/10.1007/978-1-4939-1384-8_5&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
       <title>Talk slides: concentration inequalities</title>
       <link>https://sladjkf.github.io/posts/3_stat_rit_talk/</link>
       <pubDate>Fri, 13 Sep 2024 00:00:00 +0000</pubDate>
