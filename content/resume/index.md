@@ -42,6 +42,14 @@ __Research Assistant, Department of Materials Science and Engineering__ <br>
 - Optimized numerical model runtime (R and C++) using profiling, resulting in speedups of 300%.
 - Presented at the 2021 Distinguished Undergraduate Hypersonics Symposium and published in ASME Journal of Computing and Information Science in Engineering.
 
+## Industry experience
+
+---
+
+__Simulation and Modeling Intern, Sedaro__ <br>
+*2025*
+
+- Develop simulation optimization software for cloud-based simulation platform.
 
 ## Teaching and service
 ---
