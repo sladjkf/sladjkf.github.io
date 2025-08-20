@@ -19,9 +19,19 @@ B.S., Engineering Science (Mathematics, Computer Science) <br>
 _(2019 - 2023)_
 
 
-## Research experience
+## Experience
 
 ---
+
+__Simulation and Modeling Intern, Sedaro__ <br>
+*2025*
+
+- Applied gradient-based (`scipy`) and black-box (Ax) optimization to aerospace engineering problems (orbit burn scheduling, PID tuning).
+- Built end-to-end differentiable simulation optimization workflows integrating OpenMDAO, JAX, and proprietary simulation engine.
+- Formulated and refined network routing problems (Pyomo) from system requirements. 
+- Benchmarked MI(N)LP solvers (SCIP, CBC, HiGHS) and developed routing heuristics reducing solve time 200x while retaining ~80% performance.
+- Supported consulting and business development efforts with technical expertise.
+
 
 __Research Assistant, UVA Biocomplexity Institute__ <br>
 *Mentor: Anil Vullikanti* <br>
@@ -41,15 +51,6 @@ __Research Assistant, Department of Materials Science and Engineering__ <br>
 - Assisted in development of frontend web application in R Shiny.
 - Optimized numerical model runtime (R and C++) using profiling, resulting in speedups of 300%.
 - Presented at the 2021 Distinguished Undergraduate Hypersonics Symposium and published in ASME Journal of Computing and Information Science in Engineering.
-
-## Industry experience
-
----
-
-__Simulation and Modeling Intern, Sedaro__ <br>
-*2025*
-
-- Develop simulation optimization software for cloud-based simulation platform.
 
 ## Teaching and service
 ---
