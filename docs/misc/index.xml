@@ -2,21 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Miscs on Nicholas Ruiyuan Wu</title>
-    <link>http://localhost:1313/misc/</link>
+    <link>https://sladjkf.github.io/misc/</link>
     <description>Recent content in Miscs on Nicholas Ruiyuan Wu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://localhost:1313/misc/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sladjkf.github.io/misc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+    <item>
+      <title>year two</title>
+      <link>https://sladjkf.github.io/posts/6_year_two/</link>
+      <pubDate>Tue, 19 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://sladjkf.github.io/posts/6_year_two/</guid>
+      <description>&lt;p&gt;So - two years of grad school have gone by, huh? Every time I see my friends we always talk about how fast it&amp;rsquo;s all gone. The year was full of new challenges, both personal and academic, and here we stand on the precipice of a new one, heh.&lt;/p&gt;
+&lt;p&gt;Once again, it&amp;rsquo;s an opportunity to reflect on what was challenging, what went well, and also as a resource for those out there reading this. Which I am surprised there are! Thanks to those who have sent emails saying that this site has been helpful.&lt;/p&gt;
+&lt;h2 id=&#34;what-did-i-even-do-over-the-past-academic-year&#34;&gt;what did I even do over the past (academic) year?&lt;/h2&gt;
+&lt;p&gt;Great question. With the quals and first salvo of courses out of the way, I used the year to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(mostly) wrap up my core coursework&lt;/li&gt;
+&lt;li&gt;attend a seminar course/go to more talks&lt;/li&gt;
+&lt;li&gt;apply for summer internships&lt;/li&gt;
+&lt;li&gt;work on getting more into research&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I was fortunate enough to land a great internship opportunity for the summer, which I&amp;rsquo;m just wrapping up as I write this post. I spent my summer working and playing &lt;a href=&#34;https://www.youtube.com/watch?v=p0OIgzSlgng&amp;amp;t=24s&#34;&gt;a lot&lt;/a&gt; of &lt;a href=&#34;https://www.youtube.com/watch?v=FMjHlbBjYZk&#34;&gt;music&lt;/a&gt; (and listening to it too).&lt;/p&gt;
+&lt;p&gt;In order, then&amp;hellip;&lt;/p&gt;
+&lt;h2 id=&#34;coursework&#34;&gt;coursework&lt;/h2&gt;
+</description>
+    </item>
     
     
     
     <item>
       <title>jazz and math</title>
-      <link>http://localhost:1313/posts/5_jazz_math/</link>
+      <link>https://sladjkf.github.io/posts/5_jazz_math/</link>
       <pubDate>Fri, 11 Apr 2025 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/5_jazz_math/</guid>
+      <guid>https://sladjkf.github.io/posts/5_jazz_math/</guid>
       <description>&lt;p&gt;&lt;em&gt;Here&amp;rsquo;s a slightly rambly and somewhat pretentious post about my thoughts on the similarities between math and jazz.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;I attended a lecture/Q&amp;amp;A session today at UMD given by the jazz bassist &lt;a href=&#34;https://en.wikipedia.org/wiki/Linda_May_Han_Oh&#34;&gt;Linda May Han Oh&lt;/a&gt;.
 First of all, how cool is it that we have these preeminent musicians coming to UMD??? It&amp;rsquo;s not quite something I&amp;rsquo;m used to, and it feels like
@@ -44,10 +68,10 @@ a rare privilege to be able to listen to these musicians live; let alone hear th
     
     <item>
       <title>Stochastic gradient estimation - two Markov chain examples</title>
-      <link>http://localhost:1313/posts/4_stoch_grads/</link>
+      <link>https://sladjkf.github.io/posts/4_stoch_grads/</link>
       <pubDate>Mon, 07 Oct 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/4_stoch_grads/</guid>
+      <guid>https://sladjkf.github.io/posts/4_stoch_grads/</guid>
       <description>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css&#34; integrity=&#34;sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X&#34; crossorigin=&#34;anonymous&#34;&gt;
 &lt;!-- The loading of KaTeX is deferred to speed up page rendering --&gt;
 &lt;script defer src=&#34;https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js&#34; integrity=&#34;sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
@@ -259,10 +283,10 @@ where \(X \sim \text{Poisson}(\lambda \theta)\).&lt;/p&gt;
     
     <item>
       <title>Talk slides: concentration inequalities</title>
-      <link>http://localhost:1313/posts/3_stat_rit_talk/</link>
+      <link>https://sladjkf.github.io/posts/3_stat_rit_talk/</link>
       <pubDate>Fri, 13 Sep 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/3_stat_rit_talk/</guid>
+      <guid>https://sladjkf.github.io/posts/3_stat_rit_talk/</guid>
       <description>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css&#34; integrity=&#34;sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X&#34; crossorigin=&#34;anonymous&#34;&gt;
 &lt;!-- The loading of KaTeX is deferred to speed up page rendering --&gt;
 &lt;script defer src=&#34;https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js&#34; integrity=&#34;sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
@@ -282,10 +306,10 @@ where \(X \sim \text{Poisson}(\lambda \theta)\).&lt;/p&gt;
     
     <item>
       <title>My first year of grad school</title>
-      <link>http://localhost:1313/posts/2_first_year_grad_school/</link>
+      <link>https://sladjkf.github.io/posts/2_first_year_grad_school/</link>
       <pubDate>Tue, 28 May 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/2_first_year_grad_school/</guid>
+      <guid>https://sladjkf.github.io/posts/2_first_year_grad_school/</guid>
       <description>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css&#34; integrity=&#34;sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X&#34; crossorigin=&#34;anonymous&#34;&gt;
 &lt;!-- The loading of KaTeX is deferred to speed up page rendering --&gt;
 &lt;script defer src=&#34;https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js&#34; integrity=&#34;sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
@@ -409,10 +433,10 @@ It&amp;rsquo;s trivial if you know the &lt;a href=&#34;https://en.wikipedia.org/
     
     <item>
       <title>First post</title>
-      <link>http://localhost:1313/posts/1_my_first_post/</link>
+      <link>https://sladjkf.github.io/posts/1_my_first_post/</link>
       <pubDate>Tue, 02 May 2023 11:31:40 -0400</pubDate>
       
-      <guid>http://localhost:1313/posts/1_my_first_post/</guid>
+      <guid>https://sladjkf.github.io/posts/1_my_first_post/</guid>
       <description>&lt;p&gt;This is mostly just a test of the posting functionality for this website&amp;hellip; hopefully more actual content to come soon! I&amp;rsquo;m thinking of using this page to write some stuff about what I&amp;rsquo;ve been studying and thinking about, and with more time coming up as my undergrad ends, I&amp;rsquo;ll be able to find time to do so.&lt;/p&gt;
 </description>
     </item>
