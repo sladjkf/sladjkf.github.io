@@ -3,6 +3,9 @@
 
 ---
 
+[Google Scholar](https://scholar.google.com/citations?user=LxXPJ3cAAAAJ&hl=en)
+
+
 ### [Estimating the maximum risk of measles outbreaks due to heterogenous fall in immunization rates (preprint)](https://www.medrxiv.org/content/10.1101/2023.10.24.23297486v1)
 
 *with Sifat Afroj Moon, Ami Falk, Achla Marathe, Anil Vullikanti*

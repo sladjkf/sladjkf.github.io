@@ -13,24 +13,74 @@
     
     
     <item>
-      <title>year two</title>
-      <link>https://sladjkf.github.io/posts/6_year_two/</link>
-      <pubDate>Tue, 19 Aug 2025 00:00:00 +0000</pubDate>
+      <title>Notes on the adjoint method</title>
+      <link>https://sladjkf.github.io/posts/7_adjoint_grad/</link>
+      <pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://sladjkf.github.io/posts/6_year_two/</guid>
-      <description>&lt;p&gt;So - two years of grad school have gone by, huh? Every time I see my friends we always talk about how fast it&amp;rsquo;s all gone. The year was full of new challenges, both personal and academic, and here we stand on the precipice of a new one, heh.&lt;/p&gt;
-&lt;p&gt;Once again, it&amp;rsquo;s an opportunity to reflect on what was challenging, what went well, and also as a resource for those out there reading this. Which I am surprised there are! Thanks to those who have sent emails saying that this site has been helpful.&lt;/p&gt;
-&lt;h2 id=&#34;what-did-i-even-do-over-the-past-academic-year&#34;&gt;what did I even do over the past (academic) year?&lt;/h2&gt;
-&lt;p&gt;Great question. With the quals and first salvo of courses out of the way, I used the year to:&lt;/p&gt;
+      <guid>https://sladjkf.github.io/posts/7_adjoint_grad/</guid>
+      <description>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css&#34; integrity=&#34;sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X&#34; crossorigin=&#34;anonymous&#34;&gt;
+&lt;!-- The loading of KaTeX is deferred to speed up page rendering --&gt;
+&lt;script defer src=&#34;https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js&#34; integrity=&#34;sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
+&lt;!-- To automatically render math in text elements, include the auto-render extension: --&gt;
+&lt;script defer src=&#34;https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js&#34; integrity=&#34;sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa&#34; crossorigin=&#34;anonymous&#34;
+
+    onload=&#34;renderMathInElement(document.body);&#34;&gt;&lt;/script&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;The adjoint method is a commonly used method to compute gradients of state variables (or quantities computed from state variables) with respect to system parameters. We review the ideas in discrete and continuous time, as well as in the case of deterministic and random systems.&lt;/p&gt;
+&lt;h2 id=&#34;discrete-time-deterministic-systems&#34;&gt;Discrete-time deterministic systems&lt;/h2&gt;
+&lt;p&gt;Let \( x_{i} \in \mathbb{R}^d\) denote a sequence of state variables in discrete time, representing the realization of some kind of discrete-time system. In particular, suppose the sequence satisfies a recurrence
+$$
+x_{i+1} = h_i(x_i,\theta)
+$$
+where \(\theta \in \mathbb{R}^m\) is a vector of system parameters. For simplicity, one can assume the initial state \(x_0\) to be fixed and independent of \(\theta\). Following Keane [1] the sequence of functions \(h_i: \mathbb{R}^d \rightarrow \mathbb{R}^d \) are called the &lt;em&gt;model&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;For example,&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;(mostly) wrap up my core coursework&lt;/li&gt;
-&lt;li&gt;attend a seminar course/go to more talks&lt;/li&gt;
-&lt;li&gt;apply for summer internships&lt;/li&gt;
-&lt;li&gt;work on getting more into research&lt;/li&gt;
+&lt;li&gt;\(h_i\) might represent the application of one time-step of a discrete-time simulation model,&lt;/li&gt;
+&lt;li&gt;\(h_i\) might represent the application of one step of an explicit numerical scheme for integrating an ODE, and \(x_i\) the state variables of that ODE.&lt;/li&gt;
+&lt;li&gt;\(h_i\) might represent the activation function of a neural network, with \(x_i\) the input to that layer&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;I was fortunate enough to land a great internship opportunity for the summer, which I&amp;rsquo;m just wrapping up as I write this post. I spent my summer working and playing &lt;a href=&#34;https://www.youtube.com/watch?v=p0OIgzSlgng&amp;amp;t=24s&#34;&gt;a lot&lt;/a&gt; of &lt;a href=&#34;https://www.youtube.com/watch?v=FMjHlbBjYZk&#34;&gt;music&lt;/a&gt; (and listening to it too).&lt;/p&gt;
-&lt;p&gt;In order, then&amp;hellip;&lt;/p&gt;
-&lt;h2 id=&#34;coursework&#34;&gt;coursework&lt;/h2&gt;
+&lt;p&gt;Consider any finite-time scalar function of the state variables (e.g, perhaps some kind of loss to be minimized) and write
+$$
+f(x_1, \ldots, x_n) : \mathbb{R}^d \times \ldots \times \mathbb{R}^d \rightarrow \mathbb{R}
+$$
+where \(n\) is some known fixed index.&lt;/p&gt;
+&lt;p&gt;The goal is to calculate:
+$$
+\nabla_\theta f(x_1, \ldots, x_n)
+$$&lt;/p&gt;
+&lt;p&gt;Theoretically speaking, this is trivial. We can simply derive a recurrence for the gradients of the state variables using the chain rule. Differentiating both sides with respect to \(\theta\), we get
+$$
+\frac{d x_{i+1}}{d \theta} = \frac{d h_i}{d x_i} \frac{d x_i}{d \theta} + \frac{d h_i}{d \theta}
+$$&lt;/p&gt;
+&lt;p&gt;with the initial condition \(\frac{d x_0}{d\theta} = 0\), by assumption. Properly speaking, all quantities above are Jacobians, so they are matrix-valued functions evaluated at their inputs. Then, once we have the Jacobian of the state sequence \(x_1, \ldots, x_n\) with respect to \(\theta\), we need only apply the chain rule once more to get the Jacobian of \(f\).&lt;/p&gt;
+&lt;p&gt;$$
+\frac{df}{d\theta} = \sum_{i=1} \frac{d f}{dx_i} \frac{d x_i}{d \theta}
+$$&lt;/p&gt;
+&lt;p&gt;Then we can take the transpose to get the gradient. This is called &lt;em&gt;forward-mode&lt;/em&gt; differentiation in the machine learning/autodifferentiation world.&lt;/p&gt;
+&lt;p&gt;The issues with this method is primarily &lt;em&gt;computational.&lt;/em&gt; One must maintain the full state-parameter Jacobian for every index, which is a \(d \times m\) matrix. The space complexity is thus cubic: \(O(d\cdot m \cdot n)\). This scales poorly for systems with high-dimensional state and parameter spaces.&lt;/p&gt;
+&lt;p&gt;Note we don&amp;rsquo;t really care about the state Jacobians themselves either, we mostly just want \(\frac{df}{d\theta}\), so if there is a way to implicitly solve for just \(\frac{df}{d \theta}\) without forming the full Jacobian, that would be preferable. And indeed there is!&lt;/p&gt;
+&lt;p&gt;Since the recurrence is satisfied, note that&lt;/p&gt;
+&lt;p&gt;$$
+x_{i+1} - h_i(x_i,\theta) = 0
+$$&lt;/p&gt;
+&lt;p&gt;$$
+\frac{d x_{i+1}}{d \theta} - \frac{d h_i}{d x_i} \frac{d x_i}{d \theta} - \frac{d h_i}{d \theta} =0
+$$&lt;/p&gt;
+&lt;p&gt;This means we can add any multiple of the LHS to the expression for the derivative of \(f\) and equality holds. Letting $\lambda_i$ be arbitrary multipliers,
+$$
+\frac{df}{d \theta} = \sum_{i=1}^n
+\left[
+\frac{d f}{d x_i} \frac{d x_i}{d \theta} +
+\lambda_i
+\left(
+\frac{d x_{i+1}}{d \theta} - \frac{d h_i}{d x_i} \frac{d x_i}{d \theta} - \frac{d h_i}{d \theta}
+\right)
+\right]
+$$&lt;/p&gt;
+&lt;p&gt;We want to avoid calculating \(\frac{d x_i}{d \theta}\), the state-parameter Jacobian, so we can try to choose \(\lambda_i\) so that these terms will be zeroed out.&lt;/p&gt;
+&lt;h2 id=&#34;sources&#34;&gt;Sources&lt;/h2&gt;
+&lt;p&gt;[1] Gradient Estimation and Variance Reduction in Stochastic and Deterministic Models. Ronan Keane, PhD Dissertation, May 2022. &lt;br&gt;
+&lt;a href=&#34;https://arxiv.org/abs/2405.08661&#34;&gt;https://arxiv.org/abs/2405.08661&lt;/a&gt; &lt;em&gt;(Appendix A is especially useful.)&lt;/em&gt;&lt;/p&gt;
 </description>
     </item>
     
