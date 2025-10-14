@@ -15,6 +15,12 @@ The numerical ratings are sort of arbitrary; don't expect too much coherence bet
 ## Maryland
 
 
+### [Proteus Brews](https://maps.app.goo.gl/bCbQ17TB15S6e1Uz5)
+
+**Rating**: 8.5/10
+
+Ok, weirdly enough, I think this bike shop has some of the best coffee (if not *the* best) coffee in the College Park area. I think it beats Board and Brew for sure, might be a tossup between this and Vigilante. Maybe it's not that weird, because people who are into bikes probably care about really good coffee too and put more weighting on that relative to the ambiance. Not sure. In any case, this place passes the cortado litmus test for me. Small seating area inside. I appreciate the Miku figurine near the coffee station. They also have a nice sticky bun that I got once and really liked but haven't been able to get since (because they're all sold out when I get there. Darn.)
+
 ### [Vigilante Coffee (Hyattsville)](https://maps.app.goo.gl/zrfxB3CTHoUHsWt67)
 
 **Rating**: 8/10
@@ -47,7 +53,6 @@ Delicious coffee and friendly owner! It's a bit like stepping into the past. The
 
 Talk about the kitchen sink, man. It's a library... and a rec center, and a cafe (actually a branch of the aforementioned Kefa Cafe), and a used bookstore. And there's an H-Mart up the street. Nice and quiet, large windows with lots of natural light. I think it sometimes gets busier after the local high schools let out, though.
 
-
 ### [Hyattsville Library](https://maps.app.goo.gl/9e8NJLhoLbD86MBf8)
 
 **Rating: 6.5/10**
@@ -59,6 +64,8 @@ Really similar design to the Wheaton Library (I guess they probably hired the sa
 **Rating: 8/10**
 
 In my opinion this is the best library on UMD's campus, and quite underrated too (but shh don't tell anyone). There are cubicles so you don't feel too distracted by others when you're working, and the desks are huge, especially if you can snag one of the L-shaped ones. Really helpful for someone like me who has a tablet, a binder full of scribblings, and a book out while working. Quiet, good amount of natural light, clean. Unfortunately it is not always the case that you can find study spots with natural light at UMD.... Go see a show here if you're not studying.
+
+(Update as of Fall 2025 - they got rid of a lot of the cubicles, but this is probably still the best.)
 
 ### [Cuppa Tea](https://maps.app.goo.gl/oPqVvaZUqp7Ymoeu5)
 
@@ -160,7 +167,7 @@ Leesburg locals will know that this place used to be called King St. Coffee and 
 
 **Rating**: 6.5/10
 
-One of Leesburg's more popular new cafes. I actually don't like it that much, is that okay? I think it's a bit expensive for what you get, certainly not that bad though. Not a lot of outlets and it usually gets pretty crowded on a weekend, not a bad thing though if you like bustling environments. Probably better for just hanging out with somebody on the weekend then doing any serious studying.
+One of Leesburg's more popular new (at the time of writing) cafes. I actually don't like it that much, is that okay? I think it's a bit expensive for what you get, certainly not that bad though. Not a lot of outlets and it usually gets pretty crowded on a weekend, not a bad thing though if you like bustling environments. Probably better for just hanging out with somebody on the weekend then doing any serious studying.
 
 ### [Paris Baguette (Herndon)](https://maps.app.goo.gl/uNvcp5QqFBarhfn57)
 
@@ -176,4 +183,12 @@ First time at a Paris Baguette. Pretty solid, honestly; can't complain too much.
 
 *Visited*: 10/06/2024
 
-Quite good. Wasn't sure what to expect, but as soon as I took a look at the menu I realized they take coffee pretty seriously. Ordered a pourover (not often that you see that, I feel) and a BLT (small but taste was pretty good). Open space, lots of seating, and friendly staff. Definitely will come back if I'm in the area.
+Quite good. Wasn't sure what to expect, but as soon as I took a look at the menu I realized they take coffee pretty seriously. Ordered a pourover (not often that you see that, I feel) and a BLT (small but taste was pretty good). Open space, lots of seating, and friendly staff. Definitely will come back if I'm in the area. (They now have a Reston location too, also recommended.)
+
+### [Detour Coffee](https://maps.app.goo.gl/BhRrLTp25K1VyLUi6)
+
+**Rating**: 7/10
+
+*Visited*: 10/13/2025
+
+Been a while, huh. Anyways, in the spirit of the cortado litmus test, I got a decaf cortado after lunch (if I have too much caffeine I can't sleep.) It was kinda expensive ($6 after taxes + tips) and also... not really amazing? There was a bit of sour/bitter flavor to it. Anyways, though, it wasn't the worst coffee I've had and the environment is pretty comfortable - hung for about an hour or two working on my candidacy presentation. It was pretty quiet aside from the music, most people are working on their laptops (note that it was a Monday). It feels very young professional - that's the Arlington vibe, after all. Close to the Virginia Square metro station. I like the library in the Mason Square GMU campus right across the street from here, which should be open to the public.
