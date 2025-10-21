@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" href="https://sladjkf.github.io/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.min.css">
+
+    <title>Notes on the adjoint method</title>
+</head>
+<body><header id="banner">
+    <h2><a href="https://sladjkf.github.io/">Nicholas Ruiyuan Wu</a></h2>
+    <nav>
+        <ul>
+            <li>
+                <a href="/posts/" title="posts">posts</a>
+            </li><li>
+                <a href="/research/" title="research">research</a>
+            </li><li>
+                <a href="/resume/" title="resume">resume</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main id="content">
+<article>
+    <header id="post-header">
+        <h1>Notes on the adjoint method</h1>
+        <div>
+                <time>September 1, 2025</time>
+            </div>
+    </header><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<!-- The loading of KaTeX is deferred to speed up page rendering -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<!-- To automatically render math in text elements, include the auto-render extension: -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+
+    onload="renderMathInElement(document.body);"></script>
+<h2 id="introduction">Introduction</h2>
+<p>The adjoint method is a commonly used method to compute gradients of state variables (or quantities computed from state variables) with respect to system parameters. We review the ideas in discrete and continuous time, as well as in the case of deterministic and random systems.</p>
+<h2 id="discrete-time-deterministic-systems">Discrete-time deterministic systems</h2>
+<p>Let \( x_{i} \in \mathbb{R}^d\) denote a sequence of state variables in discrete time, representing the realization of some kind of discrete-time system. In particular, suppose the sequence satisfies a recurrence
+$$
+x_{i+1} = h_i(x_i,\theta)
+$$
+where \(\theta \in \mathbb{R}^m\) is a vector of system parameters. For simplicity, one can assume the initial state \(x_0\) to be fixed and independent of \(\theta\). Following Keane [1] the sequence of functions \(h_i: \mathbb{R}^d \rightarrow \mathbb{R}^d \) are called the <em>model</em>.</p>
+<p>For example,</p>
+<ul>
+<li>\(h_i\) might represent the application of one time-step of a discrete-time simulation model,</li>
+<li>\(h_i\) might represent the application of one step of an explicit numerical scheme for integrating an ODE, and \(x_i\) the state variables of that ODE.</li>
+<li>\(h_i\) might represent the activation function of a neural network, with \(x_i\) the input to that layer</li>
+</ul>
+<p>Consider any finite-time scalar function of the state variables (e.g, perhaps some kind of loss to be minimized) and write
+$$
+f(x_1, \ldots, x_n) : \mathbb{R}^d \times \ldots \times \mathbb{R}^d \rightarrow \mathbb{R}
+$$
+where \(n\) is some known fixed index.</p>
+<p>The goal is to calculate:
+$$
+\nabla_\theta f(x_1, \ldots, x_n)
+$$</p>
+<p>Theoretically speaking, this is trivial. We can simply derive a recurrence for the gradients of the state variables using the chain rule. Differentiating both sides with respect to \(\theta\), we get
+$$
+\frac{d x_{i+1}}{d \theta} = \frac{d h_i}{d x_i} \frac{d x_i}{d \theta} + \frac{d h_i}{d \theta}
+$$</p>
+<p>with the initial condition \(\frac{d x_0}{d\theta} = 0\), by assumption. Properly speaking, all quantities above are Jacobians, so they are matrix-valued functions evaluated at their inputs. Then, once we have the Jacobian of the state sequence \(x_1, \ldots, x_n\) with respect to \(\theta\), we need only apply the chain rule once more to get the Jacobian of \(f\).</p>
+<p>$$
+\frac{df}{d\theta} = \sum_{i=1} \frac{d f}{dx_i} \frac{d x_i}{d \theta}
+$$</p>
+<p>Then we can take the transpose to get the gradient. This is called <em>forward-mode</em> differentiation in the machine learning/autodifferentiation world.</p>
+<p>The issues with this method is primarily <em>computational.</em> One must maintain the full state-parameter Jacobian for every index, which is a \(d \times m\) matrix. The space complexity is thus cubic: \(O(d\cdot m \cdot n)\). This scales poorly for systems with high-dimensional state and parameter spaces.</p>
+<p>Note we don&rsquo;t really care about the state Jacobians themselves either, we mostly just want \(\frac{df}{d\theta}\), so if there is a way to implicitly solve for just \(\frac{df}{d \theta}\) without forming the full Jacobian, that would be preferable. And indeed there is!</p>
+<p>Since the recurrence is satisfied, note that</p>
+<p>$$
+x_{i+1} - h_i(x_i,\theta) = 0
+$$</p>
+<p>$$
+\frac{d x_{i+1}}{d \theta} - \frac{d h_i}{d x_i} \frac{d x_i}{d \theta} - \frac{d h_i}{d \theta} =0
+$$</p>
+<p>This means we can add any multiple of the LHS to the expression for the derivative of \(f\) and equality holds. Letting $\lambda_i$ be arbitrary multipliers,
+$$
+\frac{df}{d \theta} = \sum_{i=1}^n
+\left[
+\frac{d f}{d x_i} \frac{d x_i}{d \theta} +
+\lambda_i
+\left(
+\frac{d x_{i+1}}{d \theta} - \frac{d h_i}{d x_i} \frac{d x_i}{d \theta} - \frac{d h_i}{d \theta}
+\right)
+\right]
+$$</p>
+<p>We want to avoid calculating \(\frac{d x_i}{d \theta}\), the state-parameter Jacobian, so we can try to choose \(\lambda_i\) so that these terms will be zeroed out.</p>
+<h2 id="sources">Sources</h2>
+<p>[1] Gradient Estimation and Variance Reduction in Stochastic and Deterministic Models. Ronan Keane, PhD Dissertation, May 2022. <br>
+<a href="https://arxiv.org/abs/2405.08661">https://arxiv.org/abs/2405.08661</a> <em>(Appendix A is especially useful.)</em></p>
+</article>
+
+        </main><footer id="footer">
+    
+</footer>
+</body>
+</html>
