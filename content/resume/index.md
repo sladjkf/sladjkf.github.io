@@ -23,6 +23,16 @@ _(2019 - 2023)_
 
 ---
 
+
+__PhD Candidate, University of Maryland__ <br>
+*Advisor: Michael C. Fu* <br>
+*2024 - present*
+
+Conduct research focused on the following topics:
+
+- **Simulation optimization of epidemic models:** Use techniques from gradient estimation to identify optimal intervention strategies and quantify sensitivity of epidemic outcomes to key system parameters.
+- **Risk-sensitive simulation optimization:** Studying gradient-based simulation optimization of CVaR.
+
 __Simulation and Modeling Intern, Sedaro__ <br>
 *2025*
 
@@ -58,8 +68,9 @@ __Research Assistant, Department of Materials Science and Engineering__ <br>
 __Graduate Teaching Assistant at UMD__ <br>
 *2023 - present*
 
-Served as teaching assistant for the following courses:
-- *(F2024)* - STAT100: Elementary Statistics and Probability
+Served as teaching assistant for the following courses. Responsibilities include grading homework and leading recitation sections.
+- *(S2025, F2025)* - MATH120: Elementary Calculus I
+- *(F2024, S2026)* - STAT100: Elementary Statistics and Probability
 - *(S2024)* - STAT400: Applied Probability and Statistics I
 - *(F2023)* - MATH461: Linear Algebra for Scientists and Engineers
 
@@ -72,9 +83,10 @@ Assisted the co-PI, Mestiyage Gunatilleka, in typesetting and proofreading a fre
 __Teaching Assistant at UVA__<br>
 *2022*
 
+Responsibilities included grading (problem sets, weekly reflection journals) and leading class discussions.
+
 - _MATH4040: Discrete Mathematics_ <br>
 - _STS2500: Effective Altruism_ <br>
-Grade weekly reflection journals, lead class discussion.
 
 
 __Code Ninjas__<br>
@@ -86,17 +98,35 @@ Taught coding to elementary/middle school aged students using Scratch, Javascrip
 ## Presentations
 ---
 
-__Computing for Global Challenges Research Symposium__ *(2022)* <br>
+__StochMod__ (2026) <br>
+*Weak-Derivative and Likelihood-Ratio Gradient Estimators for a Stochastic SIR Model*
 
-__UVA Undergraduate Research Symposium__ *(2021)* <br>
+__Computing for Global Challenges Research Symposium__ (2022)<br>
+*Using a Metapopulation Model to Explore Measles Outbreak Risk arising From Undervaccination in Virginia*
 
-__Distinguished Undergraduate Hypersonics Research Symposium__ *(2021)* 
+__Undergraduate Research Symposium__ (2021) <br>
+University of Virginia 
+
+__Distinguished Undergraduate Hypersonics Research Symposium (online)__ (2021)<br> 
+*An Atlas of Printability Maps for Additive Manufacturing of Advanced Hypersonic Refractory Materials*
 
 ## Awards
 ---
 
-__Outstanding Engineering Science Student__ (2023)
+__Jacob K. Goldhaber Travel Award__ (2026) <br>
+UMD Graduate School
 
-__Undergraduate CS Research Award__ (2023)
+__Summer Research Fellowship__ (2026)<br>
+UMD Graduate School 
 
-__Distinguished Undergraduate Hypersonics Research Scholarship__ (2021)
+__Hauptmann Fellowship__ (2026)<br> 
+UMD Department of Mathematics 
+
+__Outstanding Engineering Science Student__ (2023)<br> 
+UVA School of Engineering and Applied Science 
+
+__Undergraduate CS Research Award__ (2023)<br>
+UVA Department of Computer Science 
+
+__Distinguished Undergraduate Hypersonics Research Scholarship__ (2021)<br> 
+Joint Hypersonics Transition Office 
